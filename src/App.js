@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Zujian ,{Inputs}from "./zujianImportTry"
+import Nav from "./zujianImportTry"
 
 //  第一天：
 // *import和export如何使用，以及import与commondJs中的require有何区别
@@ -76,14 +77,16 @@ class dianzan extends Component{
  
 //  注意三元运算符在react中的写法
   render(){
-    return <div><button  type="button" style={this.state.like?{color:"red"}:{color:"black"}} onClick={this.handleClick} >
-      {/* {console.log(this)} */}
-      {
-        this.state.like?"已赞":"喜欢"
-      }
-      {/* <Zujian/> */}
+    return <div><button type="button" style={this.state.like?{color:"red"}:{color:"black"}}  onClick={this.handleClick}>
+      {this.state.like?"喜欢":"已赞"}
     </button>
-     <Inputs/></div>
+    {/* <Nav title="dosomething">
+      <p>1515</p>
+      <p>895</p>
+    </Nav> */}
+    <Zujian name="greatdeal"/>
+     {/* <Inputs/> */}
+     </div>
   }
  
 }
